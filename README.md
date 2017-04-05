@@ -1,15 +1,15 @@
 # sort-contigs
 Sorts contigs in GENBANK or FASTA file
 
-##Author
+## Author
 
 Jason Kwong (@kwongjc)
 
-##Dependencies
+## Dependencies
 * Python 2.7.x
 * BioPython
 
-##Usage
+## Usage
 
 ```
 $ sort-contigs.py -h
@@ -29,7 +29,7 @@ optional arguments:
   --version     show program's version number and exit
 ```
 
-##Bugs
+## Bugs
 
 Please submit via the [GitHub issues page](https://github.com/kwongj/sort-contigs/issues).  
 

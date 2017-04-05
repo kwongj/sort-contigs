@@ -7,6 +7,7 @@ from __future__ import print_function
 
 # Import modules
 import argparse
+import os
 import sys
 import StringIO
 from Bio import SeqIO
@@ -55,7 +56,11 @@ for seqREC in SeqIO.parse(ctgfile, format):
 	ctg_ids.append(seqREC.id)
 if len(ctg_ids) < 1:
 	err('ERROR: Check file format.')
-ctg_ids.sort()
+if args.order:
+	with open(orderfile) as file:
+		ctg_ids = [line.rstrip() for line in file]
+else:
+	ctg_ids.sort()
 for id in ctg_ids:
 	seqNEW.append(ctglist[id])
 
